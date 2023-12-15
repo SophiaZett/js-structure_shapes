@@ -1,24 +1,26 @@
+import { Element } from "./components/Element/Element.js";
+import { Pentagon } from "./components/Pentagon/Pentagon.js";
+import { Square } from "./components/Square/Square.js";
+import { getRandomColor } from "./utils/randomColor.js";
 
 console.clear();
 
 const root = document.getElementById("root");
-
+/*
 const circle = document.createElement("div");
 circle.classList.add("circle");
 circle.addEventListener("click", () => {
-  circle.style.backgroundColor = "#ccc";
+  circle.style.backgroundColor = getRandomColor();
 });
 
-const square = document.createElement("div");
-square.classList.add("square");
-square.addEventListener("click", () => {
-  square.style.backgroundColor = "#ccc";
-});
+const square = Square();
 
-const pentagon = document.createElement("div");
-pentagon.classList.add("pentagon");
-pentagon.addEventListener("click", () => {
-  pentagon.style.backgroundColor = "#ccc";
-});
+const pentagon = Pentagon();
+*/
+const circle = Element("circle");
+
+const square = Element("square");
+
+const pentagon = Element("pentagon");
 
 root.append(circle, square, pentagon);
